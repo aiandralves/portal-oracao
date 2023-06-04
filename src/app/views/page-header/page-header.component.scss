@@ -1,0 +1,11 @@
+:host ::ng-deep {
+    .header {
+        @apply pl-2 p-0 bg-transparent text-accent w-full relative flex;
+        mat-label {
+            @apply text-base sm:text-lg font-text font-bold ml-2 sm:ml-4 text-accent;
+        }
+        mat-icon {
+            @apply text-xl sm:text-2xl sm:w-6 sm:h-6 sm:leading-6 w-7 h-7 leading-7;
+        }
+    }
+}

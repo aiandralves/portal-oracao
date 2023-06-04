@@ -1,0 +1,17 @@
+<div fxLayout="column" fxLayout.gt-md="row" fxLayoutAlign="start" fxLayoutAlign.gt-md="space-around center">
+    <page-header fxFlex icon="menu_book" title="Novena Mãos Ensanguentadas de Jesus"></page-header>
+    <div class="btn">
+        <a mat-stroked-button class="btn" target="_blank" href="assets/doc/novena/oracao.pdf">
+            Baixar Novena
+        </a>
+    </div>
+</div>
+
+<div class="card" *ngFor="let  card of cards">
+    <div class="card-content">
+        <div class="card-item" routerLink="/novena/maos-ensanguentadas-jesus/{{ card.routerLink }}">
+            <mat-icon>calendar_month</mat-icon>
+            <span>{{ card.title }}</span>
+        </div>
+    </div>
+</div>

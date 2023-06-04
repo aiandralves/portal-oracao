@@ -1,0 +1,23 @@
+.verse-container {
+    @apply mb-4 text-center px-6;
+}
+
+.header {
+    @apply text-center sm:text-left mb-4;
+    h2 {
+        @apply uppercase font-semibold text-danger;
+    }
+}
+
+.content {
+    b {
+        @apply text-info font-cursive font-semibold italic mb-4;
+    }
+    p {
+        @apply text-justify text-accent font-medium text-base leading-7;
+    }
+}
+
+.verse-footer {
+    @apply text-center py-8 text-accent font-semibold;
+}

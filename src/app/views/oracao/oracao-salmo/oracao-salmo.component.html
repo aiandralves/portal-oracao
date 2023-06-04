@@ -1,0 +1,18 @@
+<div fxLayout="column">
+    <page-header fxFlex icon="menu_book" title="Oração Semanal"></page-header>
+</div>
+
+<div class="card" *ngFor="let  card of cards">
+    <div class="card-content">
+        <div class="card-item" routerLink="/oracao/salmos/{{ card.routerLink }}">
+            <mat-icon>calendar_month</mat-icon>
+            <span>{{ card.title }}</span>
+        </div>
+        <div class="btn">
+            <a target="_blank" href="assets/doc/oracao/{{ card.href }}">
+                Baixar PDF
+                <mat-icon>download</mat-icon>
+            </a>
+        </div>
+    </div>
+</div>

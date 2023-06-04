@@ -1,0 +1,92 @@
+#sidebar-toggle {
+    @apply hidden;
+}
+
+.body-label {
+    @apply fixed h-full w-content z-30 -right-full top-0;
+}
+
+#sidebar-toggle:checked ~ .sidenav {
+    @apply w-[260px] left-0 sm:left-0 lg:w-[70px];
+}
+
+#sidebar-toggle:checked ~ .sidenav .logo {
+    @apply justify-start;
+}
+
+#sidebar-toggle:checked ~ .sidenav .side-menu {
+    @apply py-0 px-4 sm:px-[6px];
+}
+
+#sidebar-toggle:checked ~ .sidenav .side-footer {
+    @apply flex justify-center items-center;
+}
+
+#sidebar-toggle:checked ~ .content .nav {
+    @apply left-0 w-full right-0;
+}
+
+#sidebar-toggle:checked ~ .content {
+    @apply ml-0 sm:ml-[260px] lg:ml-[70px];
+}
+
+#sidebar-toggle:checked ~ .body-label {
+    @apply right-0;
+}
+
+:host {
+    .sidenav {
+        @apply fixed w-[70px] h-screen top-0 z-30 -left-full overflow-y-auto no-scrollbar transition-3s lg:w-[260px] 
+        sm:z-0 sm:left-0 bg-accent;
+    }
+
+    .logo {
+        @apply h-16 flex items-center justify-start px-4 transition-3s pt-8 pb-2 lg:justify-center;
+        .logo-icon {
+            @apply w-[34px] mr-[1.35rem];
+        }
+        .logo-name {
+            @apply w-[130px];
+        }
+    }
+
+    .side-menu {
+        @apply relative mt-6 px-[6px] py-0 flex flex-col justify-between h-auto transition-3s lg:pb-2 lg:px-4;
+    }
+
+    a {
+        @apply flex items-center text-base pt-3 pb-3 pl-0 transition-3s rounded my-1 mx-0 font-semibold;
+    }
+
+    .side-icon {
+        @apply min-w-[3.35rem] flex justify-center items-center text-xl;
+    }
+
+    .side-item {
+        & > a:hover {
+            @apply bg-container text-white;
+        }
+        & > a.active {
+            @apply bg-container border-l-4 border-primary text-white;
+        }
+        a span {
+            @apply ml-2;
+        }
+    }
+
+    .nav {
+        @apply bg-primary flex w-full h-16 py-0 px-5 items-center gap-7 justify-between z-20 left-[260px] lg:left-0;
+    }
+
+    .nav-menu {
+        @apply text-xl cursor-pointer text-white;
+    }
+
+    .content {
+        @apply ml-0 transition-3s lg:ml-[260px] sm:ml-[70px];
+    }
+
+    .main {
+        @apply w-full pt-6 px-5 pb-5;
+    }
+}

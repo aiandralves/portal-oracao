@@ -1,0 +1,51 @@
+<input type="checkbox" name="" id="sidebar-toggle">
+
+<section class="sidenav">
+    <div class="logo">
+        <img src="./assets/img/logo-icon.png" class="logo-icon">
+        <img src="./assets/img/logo-name.png" class="logo-name">
+    </div>
+
+    <div class="side-menu">
+        <ul class="menu-items" *ngFor="let item of modules">
+            <li class="side-item" *ngIf="item.enabled && !item.childrens">
+                <a class="side-link" [routerLink]="item.routerLink" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }">
+                    <mat-icon class="material-symbols-outlined side-icon">{{ item.icon }}</mat-icon>
+                    <span>{{ item.name }}</span>
+                </a>
+            </li>
+
+            <mat-expansion-panel class="side-item" *ngIf="item.enabled && item.childrens">
+                <mat-expansion-panel-header matRipple>
+                    <a class="side-link">
+                        <mat-icon class="side-icon">{{ item.icon }}</mat-icon>
+                        <span>{{ item.name }}</span>
+                        <mat-icon class="icon-right">chevron_right</mat-icon>
+                    </a>
+                </mat-expansion-panel-header>
+                <div *ngIf="item.childrens">
+                    <li *ngFor="let element of item.childrens">
+                        <a *ngIf="element.enabled" [routerLink]="element.routerLink" class="drop-link">
+                            {{ element.name }}
+                        </a>
+                    </li>
+                </div>
+            </mat-expansion-panel>
+        </ul>
+    </div>
+</section>
+
+<section class="content">
+    <nav class="nav">
+        <label for="sidebar-toggle" class="nav-menu">
+            <mat-icon class="material-icons-outlined">menu</mat-icon>
+        </label>
+    </nav>
+
+    <main class="main">
+        <router-outlet></router-outlet>
+    </main>
+</section>
+
+<label for="sidebar-toggle" class="body-label"></label>

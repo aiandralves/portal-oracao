@@ -1,1 +1,18 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "_reset";
+
+html,
+body {
+    @apply h-full font-text text-text bg-body;
+}
+
+::-webkit-scrollbar {
+    @apply w-[.4rem] h-[.4rem] rounded bg-gray-400 dark:bg-gray-500;
+}
+
+::-webkit-scrollbar-thumb {
+    @apply rounded bg-gray-600 dark:bg-gray-800;
+}

@@ -1,0 +1,30 @@
+<div class="pt-6">
+    <div fxLayout="column" fxLayout.gt-lg="row" fxLayoutGap="20px" *ngFor="let item of diasNovena">
+        <iframe width="100%" height="350" [src]="item.video" allowfullscreen></iframe>
+
+        <mat-accordion>
+            <mat-expansion-panel expanded>
+                <mat-expansion-panel-header>
+                    <mat-panel-title class="panel-title">
+                        <mat-icon>menu_book</mat-icon>
+                        <span>{{ item.day }}° Dia</span>
+                    </mat-panel-title>
+                    <mat-panel-description>
+                        {{ item.description }}
+                    </mat-panel-description>
+                </mat-expansion-panel-header>
+
+                <div class="verse-container">
+                    <p>{{ item.verse }}</p>
+                    <p>{{ item.prayer }}</p>
+                    <p>
+                        Repita muitas vezes, neste {{ item.day }}º dia, a seguinte jaculatória:
+                    </p>
+                    <p>{{ item.supplication }}</p>
+                </div>
+            </mat-expansion-panel>
+        </mat-accordion>
+    </div>
+
+    <oracao-final></oracao-final>
+</div>

@@ -1,0 +1,20 @@
+.verses {
+    @apply my-4;
+
+    .vers-wrap {
+        @apply relative pr-10 pl-5 pb-4;
+    }
+
+    .vers-order {
+        @apply text-xs absolute top-[3px] left-auto text-text;
+        right: calc(100% - 10px);
+    }
+
+    p {
+        @apply p-0 hyphens-none text-base;
+    }
+
+    span {
+        @apply align-baseline m-0 p-0 outline-none border-none bg-none;
+    }
+}

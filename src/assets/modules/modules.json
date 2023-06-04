@@ -1,0 +1,14 @@
+[
+    {
+        "name": "Oração",
+        "icon": "cheer",
+        "routerLink": "/oracao/salmos",
+        "enabled": true
+    },
+    {
+        "name": "Novena",
+        "icon": "church",
+        "routerLink": "/novena/maos-ensanguentadas-jesus",
+        "enabled": true
+    }
+]

@@ -1,0 +1,6 @@
+<mat-toolbar class="header">
+    <mat-icon *ngIf="icon">{{ icon }}</mat-icon>
+    <mat-label>{{ title }}</mat-label>
+    <span fxFlex></span>
+    <ng-content></ng-content>
+</mat-toolbar>

@@ -1,0 +1,38 @@
+.mat-mdc-card {
+    @apply py-6 px-0 rounded bg-white;
+    .mat-mdc-card-content {
+        @apply px-4;
+    }
+}
+
+.mat-expansion-panel:not([class*="mat-elevation-z"]) {
+    box-shadow: none !important;
+}
+
+.mat-mdc-form-field {
+    margin-bottom: -1.25em;
+}
+
+.mat-mdc-form-field .mdc-notched-outline__notch {
+    border-right: 0px !important;
+}
+
+.mat-mdc-paginator-range-label {
+    @apply m-0 sm:mr-8 sm:ml-6 #{!important};
+}
+
+.mat-mdc-menu-item .mat-icon-no-color,
+.mat-mdc-menu-submenu-icon {
+    @apply text-text #{!important};
+}
+
+.mat-menu-item {
+    @apply font-text text-text font-medium #{!important};
+    mat-icon {
+        @apply text-2xl w-6 h-6 leading-6 text-text #{!important};
+    }
+}
+
+.mat-list-item {
+    @apply font-text #{!important};
+}

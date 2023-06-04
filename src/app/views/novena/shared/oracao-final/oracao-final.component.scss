@@ -1,0 +1,26 @@
+.header {
+    @apply text-center mb-4;
+    h2 {
+        @apply uppercase font-semibold text-accent;
+    }
+    h5 {
+        @apply text-accent font-semibold font-cursive;
+    }
+}
+
+span {
+    @apply text-danger font-semibold text-base;
+}
+
+.content {
+    @apply px-4;
+    h3 {
+        @apply capitalize text-accent font-cursive font-semibold italic mb-4;
+    }
+    p {
+        @apply text-text font-medium text-justify font-cursive text-base leading-6;
+    }
+    strong {
+        @apply text-accent;
+    }
+}

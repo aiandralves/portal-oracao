@@ -1,0 +1,9 @@
+.btn {
+    @apply font-text font-semibold text-left ml-3 inline-flex text-text;
+    mat-icon {
+        @apply text-base leading-6 w-6 h-6;
+    }
+    &:hover {
+        @apply text-accent #{!important};
+    }
+}

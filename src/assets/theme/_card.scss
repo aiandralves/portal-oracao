@@ -1,0 +1,18 @@
+:host {
+    .card {
+        @apply border-l-4 border-l-accent bg-white p-4 rounded-md mt-4;
+        .card-content {
+            @apply flex items-center justify-between cursor-pointer;
+        }
+    }
+    .card-item,
+    .btn a {
+        @apply inline-flex gap-x-2 items-center;
+    }
+    .card-item {
+        @apply text-accent font-semibold;
+    }
+    mat-icon {
+        @apply text-lg leading-6 h-6 w-6;
+    }
+}

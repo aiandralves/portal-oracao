@@ -1,0 +1,17 @@
+.verse-container {
+    p:nth-of-type(1) {
+        @apply text-text leading-7 text-base text-justify;
+    }
+
+    p:nth-of-type(2) {
+        @apply text-info font-cursive my-4 font-semibold text-justify text-base;
+    }
+
+    p:nth-of-type(3) {
+        @apply text-text text-sm mb-4 underline font-text text-center;
+    }
+
+    p:nth-of-type(4) {
+        @apply text-accent uppercase font-cursive italic text-center font-semibold;
+    }
+}

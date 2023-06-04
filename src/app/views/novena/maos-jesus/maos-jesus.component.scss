@@ -1,0 +1,8 @@
+@import "_card";
+
+.btn {
+    @apply inline-flex gap-x-2 items-center border-gray-200;
+    mat-icon {
+        @apply text-lg leading-6 h-6 w-6;
+    }
+}

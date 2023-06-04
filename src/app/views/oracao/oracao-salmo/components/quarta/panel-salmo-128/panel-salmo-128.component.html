@@ -1,0 +1,20 @@
+<mat-expansion-panel>
+    <mat-expansion-panel-header>
+        <mat-panel-title class="panel-title">
+            <mat-icon>menu_book</mat-icon>
+            <span>Salmo 128</span>
+        </mat-panel-title>
+        <mat-panel-description>
+            Pela família
+        </mat-panel-description>
+    </mat-expansion-panel-header>
+
+    <div class="verses">
+        <div class="vers-wrap" *ngFor="let item of salmo128">
+            <p>
+                <span class="vers-order">{{ item.order }}</span>
+                <span [innerHTML]="item.verse"></span>
+            </p>
+        </div>
+    </div>
+</mat-expansion-panel>
